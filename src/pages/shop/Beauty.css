@@ -1,0 +1,415 @@
+
+.myntra-page {
+  display: flex;
+  gap: 24px;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background: #fff;
+  color: #222;
+  margin-top: 80px;
+}
+
+.sidebar {
+  width: 350px;
+   border-right: 1px solid #eee;
+  padding: 12px;
+  border-radius: 4px;
+  background: #fff;
+  height: calc(100vh - 40px);
+  overflow: auto;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03);
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.sidebar::-webkit-scrollbar {
+  display: none;
+}
+
+
+.filters-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #eaeaec;
+  margin-bottom: 10px;
+
+}
+
+.filters-title {
+  font-size: 14px;
+  font-weight: 700;
+
+  color: #282c3f;
+}
+
+.clear-all {
+  font-size: 12px;
+  font-weight: 700;
+  color: #ff3f6c;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.gender-row.inline-genders {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+
+
+}
+
+.gender-list-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 6px;
+  border-radius: 4px;
+  font-size: 13px;
+  cursor: pointer;
+  margin-right: 4px;
+}
+
+.gender-list-item input[type="radio"] {
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  margin-right: 6px;
+}
+
+.gender-row {
+  display: flex;
+  gap: 8px;
+  margin: 8px 0 12px 0;
+  flex-wrap: wrap;
+}
+
+.gender-pill input[type="radio"] {
+  display: none;
+}
+
+.gender-pill.active {
+  background: #ffebf0;
+  border-color: #ff3f6c;
+  color: #ff3f6c;
+  font-weight: 700;
+}
+
+
+.gender-list-item.active {
+  background: #ffebf0;
+  color: #ff3f6c;
+  font-weight: 700;
+}
+
+
+.gender-pill {
+  display: none;
+}
+
+.filter-title {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: none;
+  border: none;
+  font-weight: 700;
+  padding: 8px 0;
+  cursor: pointer;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.filter-title .search-icon {
+  font-size: 14px;
+  color: #666;
+  margin-left: 8px;
+  opacity: 0.9;
+}
+
+.filter-section {
+  margin-bottom: 12px;
+}
+
+.filter-body {
+  padding-left: 4px;
+  margin-top: 6px;
+}
+
+.list-item,
+.list-item input,
+.price-preset,
+.color-row,
+.list-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 6px 0;
+  font-size: 13px;
+}
+
+.list-item input,
+.color-row input {
+  transform: scale(1);
+}
+
+.item-name {
+  flex: 1;
+  text-align: left;
+}
+
+.item-count {
+  color: #777;
+  font-size: 12px;
+}
+
+.show-more {
+  background: none;
+  border: none;
+  color: #ff3f6c;
+  cursor: pointer;
+  padding: 6px 0;
+  font-size: 13px;
+}
+
+.brand-search {
+  width: 100%;
+  padding: 8px;
+  
+  border: 1px solid #e6e6e6;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  box-sizing: border-box;
+  font-size: 13px;
+}
+
+.price-range-wrapper {
+  padding: 10px 0;
+}
+
+.price-slider {
+  width: 100%;
+  cursor: pointer;
+}
+
+.price-label {
+  margin-top: 8px;
+  font-size: 14px;
+  color: black;
+  font-weight: 500;
+}
+
+.price-presets {
+  display: flex;
+  flex-direction: column;
+}
+
+.price-preset {
+  margin: 6px 0;
+}
+
+.price-manual {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.price-manual input {
+  width: 100%;
+  padding: 6px;
+  border: 1px solid #e6e6e6;
+  border-radius: 4px;
+}
+
+.color-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.swatch {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+  display: inline-block;
+  margin-right: 8px;
+}
+
+.content {
+  flex: 1;
+}
+
+.breadcrumb {
+  color: #777;
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+.page-title {
+  margin: 0 0 16px 0;
+}
+
+.products-grid {
+  margin-right: 160px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 60px;
+  border-top: 1px solid #f0f0f0;
+  padding-top: 30px;
+  padding-left: 30px;
+}
+
+
+.product-card {
+  background: #fff;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.product-card:hover {
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+}
+
+
+.card-image {
+  position: relative;
+  width: 100%;
+}
+
+.card-image img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+}
+
+.product-info {
+  padding: 10px 8px;
+}
+
+.p-name {
+  font-size: 15px;
+  font-weight: 600;
+  color: #222;
+  margin: 6px 0 4px;
+  line-height: 1.3;
+}
+
+.p-price {
+  font-size: 12px;
+  font-weight: 700;
+  color: #000;
+}
+
+.no-results {
+  padding: 40px;
+  color: #666;
+}
+
+.category-top {
+  padding: 4px 0 8px 0;
+  border-bottom: 1px solid #f0f0f0;
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+.sidebar-top {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+.small-breadcrumb {
+  font-size: 12px;
+  color: #777;
+  margin-bottom: 4px;
+}
+
+.category-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #222;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.item-count-top {
+  font-weight: 600;
+  color: #666;
+  font-size: 13px;
+}
+
+.title-text {
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+
+.brand-search {
+  display: none;
+}
+
+
+.rating-badge {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  background: transparent; 
+  padding: 0;
+}
+
+.rating-badge .star {
+  background-color: #000;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 12px;
+}
+
+.views {
+  font-size: 11px;
+  color: #000;
+  font-weight: 600;
+}
+
+.p-brand {
+ font-size: 11px;
+ color: lab(4.68% 0 0 / 0.65);
+ text-transform: uppercase;
+ letter-spacing: 0.5px;
+  margin-bottom: 2px;
+}
+.divide-line {
+  font-size: 12px;
+  color: #999;
+  margin: 0;   
+}
+
+.rating-views {
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 2px 6px;
+  border-radius: 4px;
+
+  display: flex;         
+  align-items: center;    
+  gap: 6px;               
+  font-size: 11px;
+  font-weight: 600;
+}
+.color-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 6px 0;
+  font-size: 13px;
+  cursor: pointer;
+}
+

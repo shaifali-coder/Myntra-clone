@@ -1,0 +1,275 @@
+
+body {
+  margin: 0;
+  font-family: Assistant, Helvetica, Arial, sans-serif;
+}
+
+
+.myntra-wrapper {
+  background: #fde7f0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.myntra-login-card {
+  width: 430px;
+  background: #fff;
+  border-radius: 2px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+}
+
+
+.myntra-banner img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+} 
+
+
+.myntra-content {
+  padding: 40px;
+} 
+
+
+ .login-heading {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 26px;
+} 
+
+.login-heading span {
+  font-weight: 400;
+  color: #535766;
+}
+
+
+.myntra-content input[type="text"],
+.myntra-content input[type="password"] {
+  width: 100%;
+  height: 46px;
+  border: 1px solid #d4d5d9;
+  border-radius: 2px;
+  padding: 0 14px;
+  font-size: 14px;
+  margin-bottom: 8px;
+  box-sizing: border-box;
+}
+
+.myntra-content input:focus {
+  outline: none;
+  border-color: #ff3f6c;
+}
+
+.password-field {
+  position: relative;
+}
+
+.password-field span {
+  position: absolute;
+  right: 14px;
+  top: 13px;
+  cursor: pointer;
+  color: #696b79;
+} 
+
+.otp-link {
+  font-size: 13px;
+  font-weight: 600;
+  color: #ff3f6c;
+  margin: 10px 0 22px;
+  cursor: pointer;
+} 
+
+
+.terms-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin: 16px 0;
+  font-size: 13px;
+  color: #535766;
+}
+
+.terms-checkbox {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 12px;
+  height: 12px;
+  min-width: 12px;
+  min-height: 12px;
+  border: 1px solid #d4d5d9;
+  border-radius: 2px;
+  background-color: #fff;
+  cursor: pointer;
+  position: relative;
+  margin-top: 3px;
+}
+
+.terms-checkbox:checked {
+  background-color: #ff3f6c;
+  border-color: #ff3f6c;
+}
+
+.terms-checkbox:checked::after {
+  content: "";
+  position: absolute;
+  left: 3px;
+  top: 0px;
+  width: 3px;
+  height: 6px;
+  border: solid #fff;
+  border-width: 0 1.5px 1.5px 0;
+  transform: rotate(45deg);
+}
+
+.terms-text {
+  font-size: 11px;
+  line-height: 16px;
+}
+
+.terms-text span {
+  color: #ff3f6c;
+  font-weight: 600;
+}
+
+
+.myntra-content button {
+  width: 100%;
+  height: 46px;
+  background-color: #9a8aad;
+  border: none;
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 1px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.myntra-content button:disabled {
+  background: #9a8aad;
+  cursor: not-allowed;
+} 
+
+.error {
+  font-size: 12px;
+  color: #ff3f6c;
+  margin-bottom: 10px;
+}
+
+.help-text,
+.already-account {
+  font-size: 12px;
+  color: #535766;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.help-text span,
+.login-already {
+  color: #ff3f6c;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.help-text span:hover {
+  text-decoration: underline;
+} 
+
+.google-btn {
+  width: 100%;
+  height: 46px;
+  background: #ffffff;
+  border: 1px solid #d4d5d9;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: all 0.2s ease;
+}
+
+.google-btn img {
+  width: 20px;
+  height: 20px;
+}
+
+.google-btn span {
+  font-size: 14px;
+  font-weight: 600;
+  color: #282c3f;
+}
+
+.google-btn:hover {
+  background-color: #bbd8d8;
+  border-color: #c5c6c9;
+}
+
+.google-btn:active {
+  background-color: #eaeaec;
+} 
+
+
+
+ @media (max-width: 768px) {
+  .myntra-login-card {
+    width: 90%;
+  }
+} 
+
+ @media (max-width: 480px) {
+  .myntra-login-card {
+    width: 100%;
+    margin: 12px;
+    border-radius: 6px;
+  }
+
+  .myntra-content {
+    padding: 24px;
+  }
+
+  .myntra-banner img {
+    height: 140px;
+  }
+
+  .login-heading {
+    font-size: 18px;
+  }
+
+  .myntra-content input,
+  .myntra-content button,
+  .google-btn {
+    height: 44px;
+    font-size: 14px;
+  }
+
+  .terms-text {
+    font-size: 10px;
+    line-height: 14px;
+  }
+}  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
