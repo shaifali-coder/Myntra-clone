@@ -111,10 +111,7 @@ const LandingPage = () => {
 </div>
           ))}
         </div>
-      </div>
-
-
-      <div className="card-section">
+    
         <h2>LUXE GRAND REDUCTION DEALS</h2>
         <div className="cards-wrapper">
           {luxeDeals.map((card, i) => (

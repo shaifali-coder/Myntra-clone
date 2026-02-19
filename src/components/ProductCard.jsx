@@ -1,10 +1,17 @@
+
 import React from "react";
 import { Link } from "react-router-dom";
+
 
 const ProductCard = ({ product }) => {
   return (
     <div className="product-card">
-      <Link to={`/product/${product.id}`} style={{ textDecoration: "none", color: "inherit" }}>
+     <Link
+  to={`/products/${product.id}`}
+  state={{ product }}
+  style={{ textDecoration: "none", color: "inherit" }}
+>
+
         <div className="card-image">
           <img src={product.image} alt={product.title} />
         </div>
@@ -24,6 +31,5 @@ const ProductCard = ({ product }) => {
 };
 
 export default ProductCard;
-
 
 

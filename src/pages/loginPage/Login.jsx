@@ -5,11 +5,36 @@ import axios from "axios";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import loginBanner from "../../assets/login.png";
 import "./Login.css";
+import signInWithGoogle from "../../firebase/GoogleAuth";
 
-function Login() {
+function Login({ onLoginSuccess }) {
+
   const [showPassword, setShowPassword] = useState(false);
   const [loading, setLoading] = useState(false);
   const [apiError, setApiError] = useState("");
+
+    const handleSuccess = (data) => {
+  console.log("User logged in:", data);
+  alert("Google Login Successful");
+ 
+  onLoginSuccess?.(data);
+};
+
+ 
+
+  const handleError = (error) => {
+    console.log("Login failed:", error);
+    setApiError("Google login failed");
+  };
+
+  const handleGoogleLogin = async () => {
+    try {
+      const data = await signInWithGoogle();
+      handleSuccess(data);
+    } catch (error) {
+      handleError(error);
+    }
+  };
 
   const formik = useFormik({
     initialValues: {
@@ -32,17 +57,29 @@ function Login() {
       setApiError("");
 
       try {
-        const response = await axios.post(
-          `${import.meta.env.VITE_API_URL}/api/auth/login`,
-          values
-        );
+        // const response = await axios.post(
+        //   `${import.meta.env.VITE_API_URL}/api/auth/login`,
+        //   values
+        // );
 
-        console.log("Login response:", response.data);
+        // console.log("Login response:", response.data);
 
       
-        localStorage.setItem("token", response.data.token);
+        // localStorage.setItem("token", response.data.token);
 
-        alert("Login Successful");
+        // alert("Login Successful");
+        const response = await axios.post(
+  `${import.meta.env.VITE_API_URL}/api/auth/login`,
+  values
+);
+
+localStorage.setItem("token", response.data.token);
+
+
+onLoginSuccess?.(response.data);
+
+alert("Login Successful");
+
       } catch (error) {
         console.error("Login error:", error);
 
@@ -63,7 +100,21 @@ function Login() {
         </div>
 
         <div className="ln-content">
-          <h2 className="ln-heading">Login</h2>
+          <h2 className="ln-heading">Login</h2> 
+
+     <button 
+  className="google-login-btn" 
+  onClick={handleGoogleLogin}
+>
+  <img 
+    src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" 
+    alt="Google" 
+    className="google-icon"
+  />
+  Login with Google
+</button>
+
+
 
           <form onSubmit={formik.handleSubmit}>
             <input

@@ -1,0 +1,154 @@
+.men-container {
+  padding: 30px 40px;
+  background: #f5f5f6;
+}
+
+.men-banner {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+
+.men-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.banner-content {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+  color: white;
+}
+
+.banner-content h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.banner-content p {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.men-title {
+  font-size: 24px;
+  margin-bottom: 25px;
+  color: #282c3f;
+  font-weight: 600;
+}
+
+.men-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.men-card {
+  background: #fff;
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.men-card:hover {
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+.image-container {
+  position: relative;
+}
+
+.image-container img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  
+}
+
+
+.rating-badge {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 4px 8px;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 4px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+}
+
+
+.product-info {
+  padding: 10px;
+}
+
+.brand-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #282c3f;
+  margin-bottom: 2px;
+}
+
+.product-name {
+  font-size: 13px;
+  color: #696b79;
+  margin-bottom: 6px;
+}
+
+.price-section {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.new-price {
+  font-size: 14px;
+  font-weight: 700;
+  color: #282c3f;
+}
+
+.old-price {
+  font-size: 12px;
+  color: #7e818c;
+  text-decoration: line-through;
+}
+
+.discount {
+  font-size: 12px;
+  font-weight: 600;
+  color: #ff905a;
+}
+
+@media (max-width: 1024px) {
+  .men-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .men-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .image-container img {
+    height: 280px;
+  }
+}
+
+@media (max-width: 480px) {
+  .men-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .men-container {
+    padding: 20px;
+  }
+}

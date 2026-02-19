@@ -1,0 +1,23 @@
+{
+   "data": [
+  { "id": 1, "name": "Face Wash", "brand": "Brand A", "price": 199, "rating": 4.2, "views": "12k", "img": "https://images-static.nykaa.com/media/catalog/product/e/8/e8f0db38901012184028_01.jpg?tr=w-500" },
+  { "id": 2, "name": "Moisturizer", "brand": "Brand B", "price": 399, "rating": 4.5, "views": "18k", "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQTvoGQrrDYWx0mkLwK9lqLqNyFXABtgCg_g&s" },
+  { "id": 3, "name": "Sunscreen", "brand": "Brand C", "price": 249, "rating": 3.9, "views": "9k", "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpKX0vla5_J33tsXIFZbvKLE-Iz4HEkq25MQ&s" },
+  { "id": 4, "name": "Shampoo", "brand": "Brand D", "price": 299, "rating": 4.1, "views": "7k", "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReOfcVjIopEN5VCKL4mSdlZW8s7h8W9-C8DA&s" },
+  { "id": 5, "name": "Face Wash", "brand": "Brand E", "price": 165, "rating": 3.6, "views": "5k", "img": "https://www.audora.in/cdn/shop/files/02_22101c69-2a7f-459a-988b-77ba856c686c.jpg?v=1709292565" },
+  { "id": 6, "name": "Pill of mask", "brand": "Brand F", "price": 350, "rating": 4.6, "views": "20k", "img": "https://m.media-amazon.com/images/I/61eepy5CY+L._AC_UF1000,1000_QL80_.jpg" },
+  { "id": 7, "name": "Lipstick", "brand": "Brand G", "price": 495, "rating": 4.4, "views": "25k", "img": "https://media6.ppl-media.com//tr:h-750,w-750,c-at_max,dpr-2,q-40/static/img/product/380980/ny-bae-velvet-mousse-lipstick-spicy-rust-06_1_display_1760003083_14c83e62.jpg" },
+  { "id": 8, "name": "Body lotion", "brand": "Brand H", "price": 299, "rating": 4.0, "views": "11k", "img": "https://assets.myntassets.com/dpr_1.5,q_30,w_400,c_limit,fl_progressive/assets/images/2025/SEPTEMBER/8/taWWnoeY_ae659fc2e49e46eaa3a179512ca3281f.jpg" },
+  { "id": 9, "name": "Blush & Highlight Palette", "brand": "Brand I", "price": 110, "rating": 3.8, "views": "6k", "img": "https://swissbeauty.in/cdn/shop/products/2_06ddaee4-cfe0-4601-8c79-958984db380f.png?v=1748634598&width=620" },
+  { "id": 10, "name": "Eyeliner", "brand": "Brand J", "price": 399, "rating": 4.7, "views": "30k", "img": "https://artdeco.com/cdn/shop/collections/Kategoriebanner-Eyeliner-Kajal.jpg?v=1695401377&width=1024" },
+  { "id": 11, "name": "Foundation", "brand": "Brand K", "price": 445, "rating": 4.1, "views": "14k", "img": "https://www.coloressence.com/cdn/shop/files/HDF-5.jpg?v=1747659886" },
+  { "id": 12, "name": "Primer", "brand": "Brand L", "price": 120, "rating": 3.7, "views": "8k", "img": "https://cdn.tirabeauty.com/v2/billowing-snowflake-434234/tira-p/wrkr/products/pictures/item/free/resize-w:540/891942/imo9dyQ8qO-891942_1.jpg" },
+  { "id": 13, "name": "Nail Polish", "brand": "Brand M", "price": 399, "rating": 4.3, "views": "16k", "img": "https://m.media-amazon.com/images/I/718Ksdx1xCL._AC_UF1000,1000_QL80_.jpg" },
+  { "id": 14, "name": "Compact", "brand": "Brand N", "price": 249, "rating": 4.0, "views": "10k", "img": "https://hilaryrhoda.in/cdn/shop/files/3_a71386eb-90f5-478a-a04b-f34e99095132.jpg?v=1755456712&width=1200" },
+  { "id": 15, "name": "Shower gel", "brand": "Brand O", "price": 299, "rating": 3.9, "views": "9k", "img": "https://bellavitaluxury.co.in/cdn/shop/files/2_12.jpg?v=1709993456&width=1000" }
+]
+}
+
+
+
+

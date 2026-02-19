@@ -11,20 +11,14 @@ import signInWithGoogle from "../../firebase/GoogleAuth";
 
 
 
+
 function Signup() {
   const [showPassword, setShowPassword] = useState(false);
   const [checked, setChecked] = useState(false);
   const [apiError, setApiError] = useState("");
  const navigate = useNavigate();
 
-  
-
-  
-
   const isMobile = (value = "") => /^[6-9]\d{9}$/.test(value);
-
-  
-
 
   const formik = useFormik({
     initialValues: {
@@ -106,7 +100,7 @@ function Signup() {
             Signup
           </h2>
 
- <button
+         <button
               type="button"
               className="google-btn"
               onClick={signInWithGoogle}
@@ -115,10 +109,7 @@ function Signup() {
               Continue with Google
             </button> 
 
-      
-
-
-
+    
 
           <form onSubmit={formik.handleSubmit}>
           

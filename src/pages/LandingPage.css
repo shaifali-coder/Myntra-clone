@@ -4,7 +4,6 @@
   margin-top: 12px;
 }
 
-
 .main-banner {
   width: 100%;
   max-width: 1400px;
@@ -55,15 +54,15 @@
 .dot.active {
   background-color: hsla(346, 7%, 50%, 0.96);
 }
-
+.card-section{
+  width: 100%;
+}
 
 .card-section h2 {
   font-size: 22px;
   font-weight: 600;
   margin: 65px 0 16px 40px;
 }
-
-
 .cards-wrapper {
   display: flex;
   width: 100%;
@@ -172,6 +171,18 @@
     flex: 0 0 85%;
     max-width: 85%;
   }
+  .card-img-wrapper img {
+  width: 100%;
+  }
+  .cards-wrapper {
+  width: 100%;
+}
+.card-section{
+  width: 100%;
+}
+ .card {
+  width: 100%;
+ }
 }
 
 
