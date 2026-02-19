@@ -1,13 +1,17 @@
+import React, { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
+import "./ProductDetails.css";
 
 const ProductDetails = () => {
   const location = useLocation();
   const navigate = useNavigate();
-
   const product = location.state?.product;
 
+  const [selectedSize, setSelectedSize] = useState("");
+  const [quantity, setQuantity] = useState(1);
+
   if (!product) {
-    return <h2 style={{ padding: "100px" }}>Product Not Found</h2>;
+    return <h2 className="not-found">Product Not Found</h2>;
   }
 
   const price = Number(product.price) || 0;
@@ -19,89 +23,85 @@ const ProductDetails = () => {
   }
 
   const handleAddToCart = () => {
+    if (!selectedSize) {
+      alert("Please select size");
+      return;
+    }
+
     const existingCart = JSON.parse(localStorage.getItem("cart")) || [];
-    existingCart.push(product);
+
+    const updatedProduct = {
+      ...product,
+      selectedSize,
+      quantity,
+    };
+
+    existingCart.push(updatedProduct);
     localStorage.setItem("cart", JSON.stringify(existingCart));
+
     navigate("/cart");
   };
 
   return (
-    <div style={{
-      padding: "120px 40px",
-      display: "flex",
-      gap: "60px"
-    }}>
+    <div className="product-container">
 
-  
-      <div>
+      <div className="image-section">
         <img
           src={`${product.img}?auto=format&fit=crop&w=700&q=80`}
           alt={product.name}
-          style={{ width: "400px", borderRadius: "10px" }}
+          className="main-image"
         />
       </div>
 
-      <div style={{ maxWidth: "500px" }}>
-        <h2>{product.brand}</h2>
-        <p style={{ fontSize: "20px", color: "gray" }}>
-          {product.name}
-        </p>
 
-        <div style={{ margin: "15px 0" }}>
-          <span style={{
-            fontSize: "26px",
-            fontWeight: "bold"
-          }}>
-            ₹{price}
-          </span>
+      <div className="details-section">
+        <h2 className="brand">{product.brand}</h2>
+        <p className="product-name">{product.name}</p>
+
+        <div className="price-section">
+          <span className="price">₹{price}</span>
 
           {oldPrice > 0 && (
             <>
-              <span style={{
-                marginLeft: "10px",
-                textDecoration: "line-through",
-                color: "gray"
-              }}>
-                ₹{oldPrice}
-              </span>
-
+              <span className="old-price">₹{oldPrice}</span>
               {discount > 0 && (
-                <span style={{
-                  marginLeft: "10px",
-                  color: "green",
-                  fontWeight: "bold"
-                }}>
-                  {discount}% OFF
-                </span>
+                <span className="discount">{discount}% OFF</span>
               )}
             </>
           )}
         </div>
 
-        <div style={{
-          marginBottom: "20px",
-          background: "#f3f3f3",
-          display: "inline-block",
-          padding: "5px 10px",
-          borderRadius: "5px"
-        }}>
+        <div className="rating-box">
           ⭐ {product.rating} | {product.ratingCount} Ratings
         </div>
 
-        <button
-          onClick={handleAddToCart}
-          style={{
-            display: "block",
-            marginTop: "20px",
-            padding: "15px 40px",
-            backgroundColor: "#ff3f6c",
-            color: "white",
-            border: "none",
-            fontSize: "16px",
-            cursor: "pointer",
-            borderRadius: "5px"
-          }}
-        >
+
+        <div className="size-section">
+          <h4>Select Size</h4>
+          <div className="sizes">
+            {["S", "M", "L", "XL"].map((size) => (
+              <button
+                key={size}
+                className={`size-btn ${selectedSize === size ? "active" : ""}`}
+                onClick={() => setSelectedSize(size)}
+              >
+                {size}
+              </button>
+            ))}
+          </div>
+        </div>
+
+    
+        <div className="quantity-section">
+          <h4>Quantity</h4>
+          <div className="quantity-controls">
+            <button onClick={() => quantity > 1 && setQuantity(quantity - 1)}>-</button>
+            <span>{quantity}</span>
+            <button onClick={() => setQuantity(quantity + 1)}>+</button>
+          </div>
+        </div>
+
+        <button className="add-to-cart-btn" onClick={handleAddToCart}>
           ADD TO CART
         </button>
       </div>
@@ -110,6 +110,7 @@ const ProductDetails = () => {
 };
 
 export default ProductDetails;
+
 
 
 
